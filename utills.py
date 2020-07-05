@@ -1,4 +1,3 @@
-import transformers
 from bs4 import BeautifulSoup
 import transformers
 from transformers import pipeline

@@ -3,9 +3,7 @@ from flask import request
 from flask import jsonify
 from flask import Flask, render_template, url_for
 import rq
-from rq import Queue
 
-q = Queue(connection=conn)
 app=Flask(__name__)
 
 @app.route('/')

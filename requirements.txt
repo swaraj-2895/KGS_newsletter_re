@@ -16,4 +16,4 @@ transformers==2.11.0
 beautifulsoup4==4.8.2
 redis==3.5.3
 rq==1.4.3
-tensorflow==2.2.0
+torch==1.5.1

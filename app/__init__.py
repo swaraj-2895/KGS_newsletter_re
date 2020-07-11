@@ -8,5 +8,5 @@ r = redis.Redis()
 
 q = Queue(connection=r)
 
-from app import views
-from app import tasks
+from app import app.views
+from app import app.tasks

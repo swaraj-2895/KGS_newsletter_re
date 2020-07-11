@@ -4,9 +4,8 @@ from flask import jsonify
 from flask import Flask, render_template, url_for
 from app import r
 from app import q
-from app import tasks
-from tasks import get_links
-from tasks import pred
+from app.tasks import get_links
+from app.tasks import pred
 
 
 app=Flask(__name__)

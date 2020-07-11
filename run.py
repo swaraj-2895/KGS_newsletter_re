@@ -1,4 +1,3 @@
-
 import flask
 from flask import request
 from flask import jsonify
@@ -8,16 +7,16 @@ from tasks import pred
 import redis
 from rq import Queue
 
-apps=Flask(__name__)
+app=Flask(__name__)
 r = redis.Redis()
 
 q = Queue(connection=r)
 
-@apps.route('/')
+@app.route('/')
 def index():
     return render_template('text_sum.html')
 
-@apps.route('/pred', methods=['POST'])
+@app.route('/pred', methods=['POST'])
 def pred():
     if request.method=='POST':
         links = q.enqueue(get_links)

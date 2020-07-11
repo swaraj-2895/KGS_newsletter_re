@@ -3,8 +3,6 @@ import transformers
 from transformers import pipeline
 import time
 import requests
-from app import app
-
 
 def get_links():
     links=[]

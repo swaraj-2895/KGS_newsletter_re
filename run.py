@@ -1,10 +1,8 @@
-from app import app
+
 import flask
 from flask import request
 from flask import jsonify
 from flask import Flask, render_template, url_for
-from app import r
-from app import q
 from tasks import get_links
 from tasks import pred
 import redis

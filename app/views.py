@@ -2,7 +2,11 @@ import flask
 from flask import request
 from flask import jsonify
 from flask import Flask, render_template, url_for
-import rq
+from app import r
+from app import q
+from tasks import get_links
+from tasks import pred
+
 
 app=Flask(__name__)
 
@@ -16,6 +20,3 @@ def pred():
         links = q.enqueue(get_links)
         head_sum, text_sum=q.enqueue(pred, links) 
     return render_template('text_sum.html', head_sum=head_sum, text_sum=text_sum)
-
-if __name__=='__main__':
-    app.run() #add threaded=True

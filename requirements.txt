@@ -10,5 +10,5 @@ requests==2.22.0
 transformers==2.11.0
 beautifulsoup4==4.8.2
 redis==3.5.3
-tensorflow-cpu==2.2.0
+tensorflow-cpu==2.5.1
 rq==1.4.3
